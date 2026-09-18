@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+
+  --sand: #f7e9d7;
+  --cream: #fff8ee;
+  --lagoon: #49b6c8;
+  --aqua: #bdecf2;
+  --palm: #4f7a61;
+  --coral: #f28c6b;
+  --gold: #d9a441;
+  --text: #3f3a36;
+  --soft-text: #746b64;
+  --white: #ffffff;
+
+  color: var(--text);
+  background: var(--cream);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(189, 236, 242, 0.55),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 40%,
+      rgba(247, 233, 215, 0.8),
+      transparent 35%
+    ),
+    var(--cream);
+
+  color: var(--text);
+
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Links */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Buttons */
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+/* Image Defaults */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Text Selection */
+
+::selection {
+  background: var(--lagoon);
+  color: white;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--lagoon);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--palm);
+}
+
+/* Reusable Section */
+
+.section {
+  padding: 110px 8%;
+}
+
+/* Section Heading */
+
+.section-title {
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(2.5rem, 5vw, 5rem);
+
+  line-height: 1.1;
+
+  color: var(--text);
+}
+
+/* Section Description */
+
+.section-subtitle {
+  color: var(--soft-text);
+
+  margin-top: 16px;
+
+  font-size: 1.05rem;
+
+  line-height: 1.7;
+
+  max-width: 650px;
+}
+
+/* Warm Glass Effect */
+
+.glass {
+  background: rgba(255, 255, 255, 0.68);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+
+  box-shadow: 0 15px 50px rgba(63, 58, 54, 0.08);
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 6%;
+  }
+}
